@@ -1,0 +1,18 @@
+// import des scss COMPOSANTS
+@import './composants/Banniere.scss';
+@import './composants/Mise_en_page/Footer/Footer.scss';
+@import './composants/Mise_en_page/Header/Header.scss';
+
+// import des scss pages
+@import './composants/Layout.scss';
+@import './composants/pages/Home.scss';
+@import './composants/pages/Apropos.scss';
+@import './composants/pages/NotFound.scss';
+@import './composants/pages/Logement.scss';
+
+main {
+    margin-left: 6.9%;
+    margin-right: 6.9%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

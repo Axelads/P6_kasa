@@ -1,8 +1,13 @@
 import React from 'react';
+import Banniere from '../Banniere';
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
+      <Banniere />
+      <div className="content">
+        
+      </div>
     </div>
   );
 };

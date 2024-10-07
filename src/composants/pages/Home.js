@@ -1,25 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import { Link } from 'react-router-dom';
-import backgroundImage from '../img/Background_accueil.png';
 import logements from '../../IDlogements';
+import Banniere from '../Banniere';
 
 const Home = () => {
-  console.log(logements);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    // Verification de la taille d'ecran
+    const handleResize = () => {
+      if (window.innerWidth <= 375) {
+        setIsMobileView(true);
+      } else {
+        setIsMobileView(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    // Nettoie le listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="home">
-      <div className="Section1">
-        <img src={backgroundImage} alt="Background Accueil" className="background-image" />
-        <p>Chez vous, partout et ailleurs</p>
-      </div>
-       <div className="Gallery">
-        {logements.slice(0, 6).map((logement) => (
+      <Banniere />
+
+      <div className="Gallery">
+        {logements.slice(0, isMobileView ? 3 : 6).map((logement) => (
           <Link key={logement.id} to={`/logement/${logement.id}`}>
             <div className="logement-card">
               <h2 className="logement-title">{logement.title}</h2>
             </div>
           </Link>
-        ))} 
+        ))}
       </div>
     </div>
   );

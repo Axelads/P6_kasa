@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Mise en page/Header/Header';
-import Footer from './Mise en page/Footer/Footer';
+import Header from './Mise_en_page/Header/Header';
+import Footer from './Mise_en_page/Footer/Footer';
 import './Layout.scss';
 
 const Layout = ({ children }) => {
