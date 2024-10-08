@@ -1,62 +1,76 @@
+/* BANNIERE */
 .Section1 {
-    height: 223px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 223px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 25px;
+
+  p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
     position: relative;
+    z-index: 2;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .background-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
     border-radius: 25px;
-  
-    
-    p {
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      color: white;
-      position: relative;
-      z-index: 2;
-      font-size: 48px;
-    }
-  
-    .background-image {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+  }
+
+  &.home-banner {
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 0;
-      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
       border-radius: 25px;
     }
-  
-    
-    &.home-banner {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); 
-        z-index: 1;
-        border-radius: 25px;
-      }
-  
-      .background-image {
-        box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3); 
-      }
-    }
-  
-    
-    &.about-banner {
-      
-      &::before {
-        content: none;
-      }
-  
-      .background-image {
-        box-shadow: none;
-      }
+
+    .background-image {
+      box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
     }
   }
+
+  &.about-banner {
+    &::before {
+      content: none;
+    }
+
+    .background-image {
+      box-shadow: none;
+    }
+  }
+}
+
+/* Responsive media query for 375px */
+@media (max-width: 375px) {
+  .Section1.home-banner, .Section1.about-banner {
+    height: 112px; 
+    
+    p {
+      font-size: 20px;
+      text-align: left;
+      white-space: normal;
+      margin-left: 15px;
+      padding-right: 50px;
+      
+    }
+  }
+}

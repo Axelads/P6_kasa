@@ -2,6 +2,7 @@
 @import './composants/Banniere.scss';
 @import './composants/Mise_en_page/Footer/Footer.scss';
 @import './composants/Mise_en_page/Header/Header.scss';
+@import './composants/Collapse.scss';
 
 // import des scss pages
 @import './composants/Layout.scss';
@@ -9,6 +10,11 @@
 @import './composants/pages/Apropos.scss';
 @import './composants/pages/NotFound.scss';
 @import './composants/pages/Logement.scss';
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
 
 main {
     margin-left: 6.9%;

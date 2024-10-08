@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './Banniere.scss';
+import '../index.css';
 
 import homeImage from '../assets/img/Background_accueil.png';
 import aboutImage from '../assets/img/Image_source2.png';

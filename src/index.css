@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* BANNIERE */
 .Section1 {
   height: 223px;
   width: 100%;
@@ -15,6 +16,7 @@
   position: relative;
   z-index: 2;
   font-size: 48px;
+  font-weight: 700;
 }
 .Section1 .background-image {
   height: 100%;
@@ -48,6 +50,20 @@
   box-shadow: none;
 }
 
+/* Responsive media query for 375px */
+@media (max-width: 375px) {
+  .Section1.home-banner, .Section1.about-banner {
+    height: 112px;
+  }
+  .Section1.home-banner p, .Section1.about-banner p {
+    font-size: 20px;
+    text-align: left;
+    white-space: normal;
+    margin-left: 15px;
+    padding-right: 50px;
+  }
+}
+/* FOOTER */
 .footer {
   position: relative;
   height: 209px;
@@ -98,6 +114,7 @@
   }
 }
 
+/* HEADER */
 .header {
   position: relative;
   height: 68px;
@@ -130,6 +147,7 @@
 }
 .header li {
   display: inline;
+  font-weight: 500;
 }
 .header li a {
   text-decoration: none;
@@ -155,12 +173,57 @@
   }
 }
 
+/* COLLAPSE */
+.collapse {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1023px;
+}
+.collapse .collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ff6060;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.collapse .collapse-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+}
+.collapse .collapse-header .arrow {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  color: white;
+  transform: rotate(90deg); /* Flèche vers le haut par défaut */
+}
+.collapse .collapse-header .open {
+  transform: rotate(270deg); /* Fait pivoter la flèche vers le bas */
+}
+.collapse .collapse-content {
+  padding: 15px;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+  border: 1px solid rgba(246, 246, 246, 0.4509803922);
+}
+.collapse .collapse-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* LAYOUT */
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* HOME */
 .Section1 {
   height: 223px;
   width: 100%;
@@ -241,6 +304,62 @@
   .logement-card {
     width: 100%;
   }
+}
+
+/* A Propos */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+/* NOT FOUND */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found h2 {
+  font-size: 288px;
+  color: #ff6060;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.not-found p {
+  font-size: 36px;
+  color: #ff6060;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.not-found .home-link {
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 375px) {
+  .not-found h2 {
+    height: 99px;
+    font-size: 96px;
+  }
+  .not-found p {
+    font-size: 18px;
+    width: 260px;
+  }
+  .home-link {
+    font-size: 14px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 main {

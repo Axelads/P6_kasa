@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Mise_en_page/Header/Header';
 import Footer from './Mise_en_page/Footer/Footer';
-import './Layout.scss';
+import '../index.css';
 
 const Layout = ({ children }) => {
   return (

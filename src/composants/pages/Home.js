@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
+import '../../index.css';
 import { Link } from 'react-router-dom';
 import logements from '../../IDlogements';
 import Banniere from '../Banniere';
