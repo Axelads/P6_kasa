@@ -1,11 +1,10 @@
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './composants/Layout.js';
-import Home from './composants/pages/Home.js';
-import About from './composants/pages/Apropos.js';
-import NotFound from './composants/pages/NotFound.js';
-import Logement from './composants/pages/Logement.js';
+import Home from './pages/Home.js';
+import About from './pages/Apropos.js';
+import NotFound from './pages/NotFound.js';
+import Logement from './pages/Logement.js';
 
 function App() {
   return (

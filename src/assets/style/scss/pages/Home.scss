@@ -45,49 +45,17 @@
 
 .Gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 35px;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Aligne 3 cards par ligne */
+  grid-gap: 20px; 
   margin-top: 25px;
-  background-color: #F6F6F6;
-  padding: 55px;
+  padding: 35px; 
+  justify-items: center; /* Centre les cards dans la grille */
   border-radius: 25px;
-
-
-  @media (max-width: 375px) {
-    background-color: transparent; /* Suppression du fond gris */
-    grid-template-columns: 1fr; 
-    padding: 0;
-    grid-gap: 20px;
-  }
-}
-
-.logement-card {
-  position: relative;
-  height: 255px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: 
-  linear-gradient(
-    180deg, 
-    rgba(255, 255, 255, 0) 0%, 
-    rgba(10, 10, 10, 0) 42%, 
-    rgba(4, 4, 4, 0.205) 99.99%, 
-    rgba(0, 0, 0, 0.5) 100%
-  ),
-  #FF6060;
-
-  .logement-title {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    max-width: 90%;
-  }
+  background-color: #F6F6F6;
 
   @media (max-width: 375px) {
-    width: 100%;
+    grid-template-columns: 1fr; /* Affiche 1 card par ligne sur mobile */
+    padding: 0px;
+    background-color: transparent;
   }
 }

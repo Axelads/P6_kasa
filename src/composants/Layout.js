@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from './Mise_en_page/Header/Header';
-import Footer from './Mise_en_page/Footer/Footer';
-import '../index.css';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 const Layout = ({ children }) => {
   return (

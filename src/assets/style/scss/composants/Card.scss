@@ -1,0 +1,32 @@
+//CARDS
+.logement-card {
+  position: relative;
+  width: 340px;
+  height: 340px; 
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FF6060;
+
+  .logement-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .logement-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+  }
+
+  @media (max-width: 375px) {
+    width: 325px;
+    height: 255px;
+  }
+}

@@ -1,0 +1,28 @@
+// import des scss COMPOSANTS
+@import '../style/scss/composants/Banniere.scss';
+@import '../style/scss/composants/Footer.scss';
+@import '../style/scss/composants/Header.scss';
+@import '../style/scss/composants/Collapse.scss';
+@import '../style/scss/composants/Card.scss';
+
+// import des scss pages
+@import '../style/scss/Layout.scss';
+@import '../style/scss/pages/Home.scss';
+@import '../style/scss/pages/Apropos.scss';
+@import '../style/scss/pages/NotFound.scss';
+@import '../style/scss/pages/Logement.scss';
+
+// APP
+@import './scss/App.scss';
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    margin-left: 6.9%;
+    margin-right: 6.9%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
